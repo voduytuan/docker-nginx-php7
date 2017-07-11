@@ -18,7 +18,7 @@ RUN add-apt-repository -y ppa:ondrej/php
 RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y --force-yes php7.0-cli php7.0-fpm php7.0-mysql php7.0-curl php7.0-redis php7.0-memcached \
-		       php7.0-gd php7.0-mcrypt php7.0-intl php7.0-tidy php7.0-bcmath
+		       php7.0-gd php7.0-mcrypt php7.0-intl php7.0-tidy php7.0-bcmath php7.0-zip
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini
 RUN sed -i 's/memory_limit\ =\ 128M/memory_limit\ =\ 2G/g' /etc/php/7.0/fpm/php.ini
